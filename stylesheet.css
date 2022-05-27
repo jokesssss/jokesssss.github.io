@@ -80,6 +80,7 @@ button {
   display: inline-flex;
   align-items: center;
   color: white;
+  white-space: nowrap;
 }
 
 #sortbuttons {
@@ -116,6 +117,7 @@ button {
   padding: 1px 16px 1px 16px;
   margin: 4px;
   margin-top: 8px;
+  white-space: nowrap;
 }
   .button-sort-off {
     height: 30px;
