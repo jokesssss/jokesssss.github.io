@@ -22,8 +22,8 @@ a {
 }
 
 a:hover{
-color: #9645FC;
-text-shadow: 0px 0px 7px rgb(150 69 252 / 0.2);
+color: #FC7145;
+text-shadow: 0px 0px 7px rgb(252 113 69 / 0.2);
 }
 
 .topLinks{
@@ -40,7 +40,7 @@ h1 {
   letter-spacing: -.02em;
   color: rgba(0, 0, 0, 0.8);
   -webkit-font-smoothing: antialiased;
-  color: #9645FC;
+  color: #FC7145;
   text-align: left;
 }
 
@@ -73,26 +73,13 @@ button {
 
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  background-image: linear-gradient(
-    340deg,
-    hsl(267deg 97% 63%) 0%,
-    hsl(268deg 97% 62%) 11%,
-    hsl(270deg 98% 62%) 22%,
-    hsl(272deg 98% 61%) 33%,
-    hsl(273deg 98% 61%) 44%,
-    hsl(275deg 98% 60%) 56%,
-    hsl(277deg 98% 59%) 67%,
-    hsl(279deg 98% 58%) 78%,
-    hsl(280deg 98% 57%) 89%,
-    hsl(282deg 98% 55%) 100%
-  );
+  background-color: #FC7145;
   border-style: none;
   border-radius: 100px;
   vertical-align: middle;
   display: inline-flex;
   align-items: center;
   color: white;
-  box-shadow: 0px 0px 7px 3px rgb(150 69 252 / 0.2);
 }
 
 #sortbuttons {
@@ -122,32 +109,45 @@ button {
 }
 
 .button-sort {
-  width: 120px;
+
   height: 30px;
   font-size: 12px;
   text-align: left;
-  padding: 1px 1px 1px 16px;
+  padding: 1px 16px 1px 16px;
   margin: 4px;
   margin-top: 8px;
 }
   .button-sort-off {
-    width: 120px;
     height: 30px;
     font-size: 12px;
     text-align: left;
-    padding: 1px 1px 1px 16px;
+    padding: 1px 16px 1px 16px;
     background-image:none;
     background-color: white;
     border-style: solid;
-    border-color: #9645FC;
-    color: #9645FC;
+    border-color: #AFAFAF;
+    color: #757575;
     box-shadow: none;
     margin: 4px;
     margin-top: 8px;
 
-
-
 }
+#jokes.button-sort {
+  background-color: #F4C314 ;
+}
+#riddle.button-sort {
+  background-color: #EB5353;
+}
+#longform.button-sort {
+  background-color: #9772FB;
+}
+#dad.button-sort {
+  background-color: #187498;
+}
+#uncle.button-sort {
+  background-color: #36AE7C;
+}
+
 .Generate{
   width: 120px;
   height: 48px;
@@ -172,7 +172,7 @@ button {
 #answer1 {
   font-family: 'Inter';
   /*font-size: 24px;*/
-  color: #9645FC;
+  color: #FC7145;
   font-weight: 700;
   max-width: 500px;
   margin: auto;
@@ -210,7 +210,7 @@ button {
 }
 
 .topnav a:hover{
-  color: #9645FC;
+  color: #FC7145;
   text-shadow: 0px 0px 7px rgb(150 69 252 / 0.2);
 }
 

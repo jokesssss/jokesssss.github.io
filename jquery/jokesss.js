@@ -4,6 +4,7 @@
           var buttonClass = "blank"
           var fullJokeList = [];
           var jokeFilter = ["jokes"];
+
           var jokeList = filterByProperty(fullJokeList, jokeFilter);
 
           if($(window).width() <= 600) {
@@ -48,25 +49,36 @@ var fullJokeList;
 
 
   //Sort Buttons
-            $('button').click(function(){
+            $('#sortbuttons :button').click(function(){
+              //turn off all Buttons
+              $('img',".button-sort").toggle();
+              $(".button-sort").toggleClass('button-sort button-sort-off');
 
-              if(this.value=="sort") {
-              //toggle appearance
+              //turn on clicked button
               $(this).toggleClass('button-sort button-sort-off');
-
-              //replace image
               $('img',this).toggle();
 
               //update jokeFilter
+              jokeFilter = [this.id]
 
-              var filterIndex = $.inArray(this.id, jokeFilter);
+              //v 1.0
+              //if(this.value=="sort") {
+              //toggle appearance
+              //$(this).toggleClass('button-sort button-sort-off');
 
-              if(filterIndex==-1){
-                jokeFilter.push(this.id);
-              }  else{
-                jokeFilter.splice(filterIndex, 1);
-              }
-            }
+              //replace image
+              //$('img',this).toggle();
+
+              //update jokeFilter
+
+              //var filterIndex = $.inArray(this.id, jokeFilter);
+
+              //if(filterIndex==-1){
+              //  jokeFilter.push(this.id);
+              //}  else{
+              //  jokeFilter.splice(filterIndex, 1);
+              //}
+            //}
 
 
               var jokeList = filterByProperty(fullJokeList, jokeFilter);
@@ -78,6 +90,7 @@ var fullJokeList;
             // Next Jokes
 
                         $(".Generate").click(function(){
+
                           var jokeList = filterByProperty(fullJokeList, jokeFilter);
                           var jokeNum = Math.floor(Math.random() * jokeList.length);
 
@@ -88,14 +101,13 @@ var fullJokeList;
                           if (formatNum == 2) {
                             var joke1 = jokeList[jokeNum][1]
 
-                            if (joke1.length >= 85) {
-                              console.log(joke1.length);
+                            if (joke1.length >= 100) {
                               $("#joke1").html("<p>" + joke1 + "</p>");
                               $("#joke1").attr("class", "longform");
                               $("#answer1").html("<p>" + "</p>");
                             }else {
-                                $("#joke1").html("<p>" + joke1 + "</p>");
-                                $("#answer1").html("<p>" + "</p>");
+                                $("#joke1").html("<p>" + "</p>");
+                                $("#answer1").html("<p>" + joke1 + "</p>");
                                 $("#joke1").removeClass("longform");
 
                               }
@@ -113,10 +125,17 @@ var fullJokeList;
 
                           //Back and forth (knock knock)
                           if (formatNum >= 4) {
-                            var joke1 = jokeList[jokeNum][1]
-                            var answer1 = jokeList[jokeNum][2]
-                            var displayjoke = "<p>" + joke1 + "</b>" + answer1 + "</p>" ;
-                            $("#joke1").html("<p>" + joke1 + "</p>");
+                            var joke1 =""
+                            for(var i = 1; i < formatNum-1; i++){
+                              if (i % 2 === 0) {var joke1 = joke1 + "<p style='text-align:right'>" + jokeList[jokeNum][i] + "</p>"}
+                              else {var joke1 = joke1 + "<p style='text-align:left'>" + jokeList[jokeNum][i] + "</p>"}
+                            }
+
+                            if (formatNum % 2 === 0) {var answer1 = "<p style='text-align:left'>" + jokeList[jokeNum][formatNum-1] + "</p>"}
+                            else {var answer1 = "<p style='text-align:right'>" + jokeList[jokeNum][formatNum-1] + "</p>"}
+
+
+                            $("#joke1").html(joke1);
                             $("#joke1").removeClass("longform");
                             $("#answer1").html("<p>" + answer1 + "</p>");
                           };
