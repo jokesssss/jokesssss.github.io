@@ -118,6 +118,7 @@ button {
   margin: 4px;
   margin-top: 8px;
   white-space: nowrap;
+  min-width: 100px;
 }
   .button-sort-off {
     height: 30px;
