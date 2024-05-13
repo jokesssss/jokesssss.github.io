@@ -1,29 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:100,300,700,900');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,500,700,900');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Inter', sans-serif;
-  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Poppins', sans-serif;
+  color: #40169A;
   font-weight: 400;
   line-height: 1.58;
   letter-spacing: -.003em;
   font-size: 20px;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #F8F5FE 0%, #F4EEFF 50%, #F4EEFF 100%);
+
 }
 
 a {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
   font-style: normal;
-  color: black;
   text-decoration: none;
+  color: #40169A;
 
 }
 
 a:hover{
-color: #FC7145;
-text-shadow: 0px 0px 7px rgb(252 113 69 / 0.2);
+color: #FD1D60;
+
 }
 
 .topLinks{
@@ -32,31 +38,29 @@ text-shadow: 0px 0px 7px rgb(252 113 69 / 0.2);
 }
 
 h1 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 38px;
+  font-size: 56px;
   line-height: 1.15;
   letter-spacing: -.02em;
   color: rgba(0, 0, 0, 0.8);
   -webkit-font-smoothing: antialiased;
-  color: #FC7145;
+  color: #40169A;
   text-align: left;
+  padding-bottom: 48px;
 }
 
 .center {
 margin: auto;
-max-width: 400px;
-min-width: 100%;
-padding-top: 200px;
-padding-bottom: 140px;
+max-width: 600px;
+
 /*background-color: #e3e3e3;*/
 }
 
 .centerAbout {
 margin: auto;
-max-width: 400px;
-min-width: 100%;
+max-width: 600px;
 padding-top: 60px;
 padding-bottom: 140px;
 /*background-color: #e3e3e3;*/
@@ -71,9 +75,9 @@ padding-bottom: 140px;
 }
 button {
 
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  background-color: #FC7145;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #40169A;
   border-style: none;
   border-radius: 100px;
   vertical-align: middle;
@@ -81,18 +85,16 @@ button {
   align-items: center;
   color: white;
   white-space: nowrap;
+
 }
 
 #sortbuttons {
   padding-top:24px;
-  position: fixed;
   margin: auto;
   left: 0;
   right: 0;
   top: 64px;
-  max-width: 700px;
-  background-image: linear-gradient(rgba(255,255,255,1) 75%, rgba(255,255,255,0));
-  padding-bottom: 64px;
+  padding-bottom: 48px;
   padding-left: 24px;
   padding-right: 24px;
   }
@@ -106,87 +108,161 @@ button {
   bottom: 0px;
   max-width: 700px;
   background-image: linear-gradient(to top, rgba(255,255,255,1) 60%, rgba(255,255,255,0));
+  
 
+}
+
+.buttonfilter {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  padding: 0px 12px 0px 16px;
+  border-style: solid;
+  margin: 8px 12px;
+
+}
+
+.buttonfilter:hover { 
+    border-color: #40169A;
+    cursor: pointer;
+    
+}
+
+.emoji {
+    padding-left: 12px;
+    font-size: 24px;
+    
 }
 
 .button-sort {
-
-  height: 30px;
-  font-size: 12px;
-  text-align: left;
-  padding: 1px 16px 1px 16px;
-  margin: 4px;
-  margin-top: 8px;
-  white-space: nowrap;
-  min-width: 100px;
+    color: #FFFFFF;
+    background-color: #40169A;
+    border-color: #40169A;
 }
   .button-sort-off {
-    height: 30px;
-    font-size: 12px;
-    text-align: left;
-    padding: 1px 16px 1px 16px;
-    background-image:none;
-    background-color: white;
-    border-style: solid;
-    border-color: #AFAFAF;
-    color: #757575;
-    box-shadow: none;
-    margin: 4px;
-    margin-top: 8px;
+    background-color: #F8F5FE;
+    border-color: #AD8DF2;
+    color: #5D37AD;
 
 }
-#jokes.button-sort {
-  background-color: #F4C314 ;
+
+  .button-sort-off:hover {
+    color: #40169A;
+
 }
-#riddle.button-sort {
-  background-color: #EB5353;
-}
-#longform.button-sort {
-  background-color: #9772FB;
-}
-#dad.button-sort {
-  background-color: #187498;
-}
-#uncle.button-sort {
-  background-color: #36AE7C;
-}
+
 
 .Generate{
-  width: 120px;
-  height: 48px;
-  font-weight: 700;
+
+  font-weight: 500;
   font-size: 20px;
-  position: fixed;
   left: 50%;
-  transform: translate(-50%, -50%);
   bottom: 16px;
-  display: block;
   z-index: 250;
+  filter: drop-shadow(5px 0px 16px rgba(64, 22, 154, .3));
+  padding: 12px 24px;
 }
+
+.Generate div {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 12px;
+    
+}
+
+.Generate div img {
+    height: 80%;
+    transition: height .1s;
+}
+
+.Generate:hover div img {
+    height: 90%;
+}
+
+.Generate:hover {
+ 
+    cursor: pointer;
+}
+
+.favorite {
+    width: 100%;
+    padding: 8px;
+    padding-top: 96px;
+    text-align: right;
+}
+
+.favorite img:nth-child(2) {
+    display:none;
+}
+
+.favorite:hover img:nth-child(2) {
+    display:inline;
+}
+
+.favorite img:nth-child(1) {
+    display:inline;
+}
+
+.favorite:hover img:nth-child(1) {
+    display:none;
+}
+
+
+.submitJoke {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 48px;
+}
+
+.secondary {
+
+  font-weight: 500;
+  font-size: 16px;
+  padding: 4px 16px;
+  background-color: #F8F5FE;
+  border-style: solid;
+  border-color: #40169A;
+  border-radius: 100px;
+  color: #40169A;
+  
+}
+
+.secondary:hover {
+    background-color: #F0E9FF;
+    cursor: pointer;
+}
+
+
+
 #joke1 {
-  font-family: 'Inter';
-  /*font-size: 24px;*/
-  padding-top: 48px;
-  max-width: 500px;
+  font-family: 'Poppins';
+  font-size: 36px;
+  font-weight: 300;
+  
+  
   margin: auto;
   padding-left: 32px;
   padding-right: 32px;
 }
 #answer1 {
-  font-family: 'Inter';
-  /*font-size: 24px;*/
-  color: #FC7145;
+  font-family: 'Poppins';
+  font-size: 56px;
   font-weight: 700;
-  max-width: 500px;
+  
   margin: auto;
   padding-left: 32px;
   padding-right: 32px;
 }
 .longform {
-  font-family: 'Inter';
-  font-size: 16px;
+  font-family: 'Poppins';
+  font-size: 24px;
   max-width: 500px;
   text-align: left;
+  margin-bottom: 16px;
 }
 
 
@@ -194,33 +270,23 @@ button {
 
 /* MENU */
 
+.topDiv {
+    padding: 24px 48px 0px 48px;  
+}
+
 .topnav {
-  overflow: hidden;
-  background-color: white;
-  position: fixed;
-  width: 100%;
+  overflow:auto; 
+  border-bottom: 1px solid #DCCBFF;
+  align-items: center;
+  display: flex;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight:700;
-  font-family: 'Inter';
-}
-
-.topnav a:hover{
-  color: #FC7145;
-  text-shadow: 0px 0px 7px rgb(150 69 252 / 0.2);
-}
 
 
 
 .topnav .icon {
   display: none;
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -229,6 +295,83 @@ button {
     float: right;
     display: block;
   }
+  
+  .topDiv {
+    padding: 12px 16px 0px 16px;  
+}
+
+ #sortbuttons {
+  padding-top:24px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 64px;
+  padding-bottom: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  }
+
+  .buttonfilter {
+  font-size: 12px;
+  padding: 0px 8px 0px 12px;
+  margin: 4px 4px;
+  border-width: 1px;
+    }
+ .emoji {
+  padding-left: 4px;
+  font-size: 16px;
+ }
+ 
+ .Generate{
+  font-size: 16px;
+  bottom: 16px;
+  z-index: 250;
+  padding: 8px 16px;
+}
+ .Generate div {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8px;
+    
+}
+
+#joke1 {
+  font-family: 'Poppins';
+  font-size: 24px;
+  font-weight: 300;
+  
+  
+  margin: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+#answer1 {
+  font-family: 'Poppins';
+  font-size: 32px;
+  font-weight: 700;
+  
+  margin: auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.longform {
+  font-family: 'Poppins';
+  font-size: 16px;
+  max-width: 500px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.favorite {
+    padding-top: 12px;
+    text-align: right;
+}
+
+
+
+
 }
 
 @media screen and (max-width: 600px) {
@@ -290,7 +433,7 @@ button {
     margin: 20px;
     letter-spacing: 1px;
     color: black;
-    font-family:'Inter', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-weight: 700;
 }
 

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DT5XM47HL7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DT5XM47HL7');
+</script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jokesss</title>
@@ -14,15 +25,17 @@
 
   </head>
   <body>
-
+    <div class="topDiv" id="myTopnav">
     <div class="topnav" id="myTopnav">
-      <a href="index.html" ><img src="images/JLogo.png" style="height:48px;float: left;padding: 8px;" class="mainLogo"></a>
+      <a href="index.html"><img src="images/logo.svg" style="height:48px;float: left; padding: 8px;"></img></a>
+      <filler style="flex-grow:1;"></filler>
       <a href="blog.html"  style="float: right;padding: 16px;">Blog</a>
       <a href="about.html"  style="float: right;padding: 16px;">About</a>
-      <a href="index.html" style="float: right;padding: 16px;"">Home</a>
+     
 
 
-      <a class="icon"><img src="images/Mobile Menu.png" style="height:48px; float: right;padding: 8px; cursor:pointer"></a>
+      <a class="icon"><img src="images/mobileMenu.svg" style="height:48px; float: right;padding: 8px; cursor:pointer"></a>
+</div>
 </div>
 
 <navbar class="sliding-navbar">
@@ -40,30 +53,20 @@
 
     </div>
     <div id="sortbuttons" >
-      <button id="jokes" type="button" class="button-sort" value="sort">
-        <img src="images/joke.png" style="height:15px; padding-right:8px; padding-left:1px;">
-        <img src="images/jokeOff.png" style="height:15px; padding-right:8px; display:none">
-        Jokes
+      <button id="jokes" type="button" class="buttonfilter button-sort" value="sort">
+        Jokes <p class="emoji">🤣</p>
       </button>
-      <button id= "longform" type="button" class="button-sort-off" value="sort">
-        <img src="images/longformOff.png" style="height:15px; padding-right:8px; padding-left:1px;">
-        <img src="images/longform.png" style="height:15px; padding-right:8px; display:none">
-        Long Form
+      <button id= "longform" type="button" class="buttonfilter button-sort-off" value="sort">
+        Long Form <p class="emoji">📖</p>
       </button>
-      <button id="dad" type="button" class="button-sort-off" value="sort">
-        <img src="images/dadOff.png" style="height:15px; padding-right:8px; padding-left:1px;">
-        <img src="images/dad.png" style="height:15px; padding-right:8px; display:none">
-        Dad Jokes
+      <button id="dad" type="button" class="buttonfilter button-sort-off" value="sort">
+        Dad Jokes <p class="emoji">👨🏻</p>
       </button>
-      <button id="uncle" type="button" class="button-sort-off" value="sort">
-        <img src="images/uncleOff.png" style="height:15px; padding-right:8px; padding-left:1px;">
-        <img src="images/uncle.png" style="height:15px; padding-right:8px; display:none">
-        Uncle Jokes
+      <button id="uncle" type="button" class="buttonfilter button-sort-off" value="sort">
+        Uncle Jokes <p class="emoji">💩</p>
       </button>
-      <button id="riddle" type="button" class="button-sort-off" value="sort">
-        <img src="images/riddleOff.png" style="height:15px; padding-right:8px; padding-left:1px;">
-        <img src="images/riddle.png" style="height:15px; padding-right:8px; display:none">
-        Riddles
+      <button id="riddle" type="button" class="buttonfilter button-sort-off" value="sort">
+        Riddles <p class="emoji">🔍</p>
       </button>
 
 
@@ -72,19 +75,24 @@
     </div>
 
     <div id="mainbox" class="center" >
-
+        <div><button class="Generate">Another! <div><img src="images/another.svg"></div></button></div>
+     <div class="favorite">
+      <!--    <img src="images/starredOff.png" style="width:36px;" ></img>
+        <img src="images/starredHover.png" style="width:36px;" ></img>
+      --!>
+      </div>
+      
       <div id = "joke1">
-        <p >Why did the chicken cross the road?</p>
+                <p >Why did the chicken cross the road?</p>
 
       </div>
       <div id = "answer1">
         <p>To get to the other side.</p>
       </div>
-      <div id = "csv-display">
-      </div>
 
-      <button class="Generate">Next!</button>
+
+      
     </div>
-      <div id="bottomgradient" </div>
+    <div class="submitJoke"><button class="secondary">Submit a joke</button></div>
   </body>
   </html>
