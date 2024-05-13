@@ -257,9 +257,10 @@ button {
   padding-left: 32px;
   padding-right: 32px;
 }
-.longform {
-  font-family: 'Poppins';
-  font-size: 16px;
+
+
+#joke1 .longform {
+  font-size: 24px;
   text-align: left;
   margin-bottom: 16px;
 }
